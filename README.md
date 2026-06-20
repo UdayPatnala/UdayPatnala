@@ -1,181 +1,131 @@
-<!-- BANNER & TYPING -->
+<!-- HEADER -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:090909&height=300&section=header&text=Uday%20Patnala&fontSize=90&fontColor=00FFCC&animation=twinkling&fontAlignY=35&desc=Architecting%20Intelligence%20|%20Engineering%20the%20Web&descAlignY=55&descAlign=50" />
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=0:4A00E0,100:8E2DE2&height=250&section=header&text=UDAY%20PATNALA&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=40&desc=Data%20Scientist%20%7C%20Software%20Engineer&descAlignY=60&descAlign=50" />
 </div>
 
-<div align="center" style="margin-top: -50px;">
+<p align="center">
   <a href="https://patnala-uday-kumar.vercel.app/">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=1500&color=8A2BE2&center=true&vCenter=true&width=800&lines=System.out.println(%22Initializing+Workspace...%22);import+%7B+Innovation+%7D+from+%22%40uday%2Fmind%22;from+future+import+machine_learning;SELECT+%2A+FROM+Projects+WHERE+Awesome%3DTrue" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=18&pause=1000&color=8E2DE2&center=true&vCenter=true&width=600&lines=Building+Intelligent+Data+Pipelines;Crafting+Scalable+Full-Stack+Architectures;Training+Predictive+Machine+Learning+Models;Ex-intern+%40+Codec+Technologies" alt="Typing SVG" />
   </a>
-</div>
+</p>
+
+<p align="center">
+  <a href="mailto:udaykumarpatnala@gmail.com"><img src="https://img.shields.io/badge/Contact_Me-4A00E0?style=for-the-badge&logo=minutemailer&logoColor=white" /></a>
+  <a href="https://patnala-uday-kumar.vercel.app/"><img src="https://img.shields.io/badge/Portfolio_Website-8E2DE2?style=for-the-badge&logo=vercel&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/uday-kumar-patnala"><img src="https://img.shields.io/badge/LinkedIn_Profile-4A00E0?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+</p>
 
 <br>
 
-<div align="center">
-  <a href="https://patnala-uday-kumar.vercel.app/"><img src="https://img.shields.io/badge/PORTFOLIO-000000?style=for-the-badge&logo=Web&logoColor=00FFCC" alt="Portfolio"/></a>
-  <a href="https://www.linkedin.com/in/uday-kumar-patnala"><img src="https://img.shields.io/badge/LINKEDIN-000000?style=for-the-badge&logo=linkedin&logoColor=8A2BE2" alt="LinkedIn"/></a>
-  <a href="mailto:udaykumarpatnala@gmail.com"><img src="https://img.shields.io/badge/EMAIL-000000?style=for-the-badge&logo=gmail&logoColor=00FF66" alt="Email"/></a>
-</div>
-
-<br><br>
-
-<!-- SYSTEM DIAGNOSTICS & BIO (DASHBOARD STYLE) -->
-<h2 align="center">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" alt="Laptop" width="35" height="35" />
-  <code>sys.get_profile_data()</code>
-</h2>
-
-<table align="center" width="100%" style="border-collapse: collapse; border: none; background-color: #0D1117;">
-  <tr style="border: none;">
-    <td width="55%" valign="top" style="border: none; padding: 20px;">
-      <h3 align="left" style="color: #00FFCC;">>_ STATUS.md</h3>
-      <p>I am a <b>Software Engineer & Data Scientist</b> specializing in highly scalable architectures, machine learning models, and complex data pipelines. I thrive at the intersection of <i>algorithm design</i> and <i>pixel-perfect UI</i>.</p>
-      <br/>
-      <h3 align="left" style="color: #00FFCC;">>_ EXECUTE.sh</h3>
-      <ul>
-        <li>🔭 <b>Currently Executing:</b> Advanced AI-Integrated Workflows.</li>
-        <li>🌱 <b>Learning Thread:</b> Distributed Systems & Deep Learning architectures.</li>
-        <li>👯 <b>Collaboration Ping:</b> Open to ML optimization & Full-Stack architecture projects.</li>
-        <li>🎯 <b>Objective:</b> Building the top 0.01% of performant applications.</li>
-      </ul>
+<!-- BENTO BOX UI GRID -->
+<table align="center" width="100%" style="border-collapse: collapse;">
+  <tr>
+    <td width="50%" valign="top" style="padding: 15px; border: 1px solid #E5E7EB; border-radius: 10px;">
+      <h3 align="center">🧠 <b>Core Expertise</b></h3>
+      <p align="center">Merging data science with robust engineering to deploy production-ready intelligence.</p>
+      <p align="center">
+        <a href="https://skillicons.dev">
+          <img src="https://skillicons.dev/icons?i=python,java,ts,js&perline=4" /><br>
+          <img src="https://skillicons.dev/icons?i=react,nextjs,fastapi,spring&perline=4" /><br>
+          <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,aws&perline=4" />
+        </a>
+      </p>
     </td>
-    <td width="45%" valign="center" align="center" style="border: none; padding: 20px;">
-      <h3 align="center" style="color: #8A2BE2;">⚙️ KERNEL_MODULES</h3>
-      <a href="https://skillicons.dev">
-        <img src="https://skillicons.dev/icons?i=java,python,c,js,ts,react,nextjs,nodejs,express,spring,fastapi,postgres,mysql,mongodb,html,css,tailwind,git,github,docker,aws,linux&perline=6" />
-      </a>
+    <td width="50%" valign="top" style="padding: 15px; border: 1px solid #E5E7EB; border-radius: 10px;">
+      <h3 align="center">📊 <b>System Telemetry</b></h3>
+      <div align="center">
+        <img src="https://github-readme-stats.vercel.app/api?username=UdayPatnala&show_icons=true&theme=transparent&hide_border=true&title_color=8E2DE2&text_color=4A00E0&icon_color=8E2DE2" width="100%" />
+      </div>
     </td>
   </tr>
 </table>
 
 <br><br>
 
-<!-- CAPSTONE PROJECTS (GLASSMORPHISM STYLE UI via TABLES) -->
-<h2 align="center">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Rocket.png" alt="Rocket" width="35" height="35" />
-  <code>/opt/capstone_projects/</code>
-</h2>
+<h2 align="center">📂 Interactive Project Archive</h2>
+<p align="center"><i>Click to expand and explore the architecture of my core systems.</i></p>
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" />
-</div>
+<!-- INTERACTIVE ACCORDIONS -->
+<details>
+  <summary><h3><b>&nbsp; 🔮 Churn Prediction Analytics System</b> <i>(Machine Learning / FastAPI)</i></h3></summary>
+  <br>
+  <blockquote>
+    An end-to-end data pipeline using Scikit-learn to forecast customer attrition. Served via a highly-concurrent FastAPI endpoint and visualized through a Streamlit frontend.
+  </blockquote>
+  <ul>
+    <li><b>Models:</b> Random Forests, XGBoost</li>
+    <li><b>Validation:</b> GridSearchCV cross-validation, ROC-AUC scoring</li>
+    <li><b>API:</b> Pydantic strict typing, FastAPI middleware</li>
+  </ul>
+  <p>
+    <a href="https://github.com/UdayPatnala/Churn-Prediction-System"><img src="https://img.shields.io/badge/View_Repository-8E2DE2?style=flat-square&logo=github&logoColor=white" /></a>
+  </p>
+</details>
 
-<table align="center" width="100%" style="border-color: transparent;">
-  <!-- ROW 1 -->
-  <tr>
-    <!-- PROJECT 1 -->
-    <td width="50%" align="center" style="border: 1px solid #1F2428; border-radius: 12px; padding: 20px; background-color: #090909;">
-      <h3 align="center" style="color: #00FFCC; margin-bottom: 5px;">🎵 Music Mirror</h3>
-      <p align="center" style="font-size: 13px; color: #8B949E; margin-top: 0;"><i>Real-Time ML Emotion Recognition</i></p>
-      <p align="left" style="font-size: 14px; margin: 15px 0;">
-        A high-frequency facial emotion scanner built on webcam APIs. Dynamically analyzes user mood via computer vision to curate and embed matched Spotify/YouTube music tracks.
-      </p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=3776AB" />
-        <img src="https://img.shields.io/badge/FastAPI-000000?style=for-the-badge&logo=FastAPI&logoColor=009688" />
-        <img src="https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=61DAFB" />
-      </p>
-      <a href="https://github.com/UdayPatnala/music-mirror"><kbd><b>&nbsp;&nbsp;Launch Source Code 🚀&nbsp;&nbsp;</b></kbd></a>
-    </td>
-    <!-- PROJECT 2 -->
-    <td width="50%" align="center" style="border: 1px solid #1F2428; border-radius: 12px; padding: 20px; background-color: #090909;">
-      <h3 align="center" style="color: #8A2BE2; margin-bottom: 5px;">🌌 Nebula Cinematic</h3>
-      <p align="center" style="font-size: 13px; color: #8B949E; margin-top: 0;"><i>AI Memory Curator</i></p>
-      <p align="left" style="font-size: 14px; margin: 15px 0;">
-        An intelligent local memory gallery utilizing the <b>Gemini Flash 1.5 API</b>. Performs high-speed image ingestion, metadata generation, and chronological sorting with duplicate detection.
-      </p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Gemini_API-000000?style=for-the-badge&logo=googlebard&logoColor=8E75B2" />
-        <img src="https://img.shields.io/badge/Node.js-000000?style=for-the-badge&logo=nodedotjs&logoColor=339933" />
-        <img src="https://img.shields.io/badge/Firebase-000000?style=for-the-badge&logo=firebase&logoColor=FFCA28" />
-      </p>
-      <a href="https://github.com/UdayPatnala/Nebula"><kbd><b>&nbsp;&nbsp;Launch Source Code 🚀&nbsp;&nbsp;</b></kbd></a>
-    </td>
-  </tr>
-  <!-- ROW 2 -->
-  <tr>
-    <!-- PROJECT 3 -->
-    <td width="50%" align="center" style="border: 1px solid #1F2428; border-radius: 12px; padding: 20px; background-color: #090909;">
-      <h3 align="center" style="color: #00FF66; margin-bottom: 5px;">☕ JavaPath Pro</h3>
-      <p align="center" style="font-size: 13px; color: #8B949E; margin-top: 0;"><i>Corporate Training Simulator</i></p>
-      <p align="left" style="font-size: 14px; margin: 15px 0;">
-        An elite interactive platform teaching Java OOP via simulated enterprise ticketing. Integrates a custom sandbox IDE with regex validation and an adaptive AI mentor.
-      </p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/React.js-000000?style=for-the-badge&logo=react&logoColor=61DAFB" />
-        <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=FFFFFF" />
-        <img src="https://img.shields.io/badge/SQLite-000000?style=for-the-badge&logo=sqlite&logoColor=07405E" />
-      </p>
-      <a href="https://github.com/UdayPatnala/Java-Path"><kbd><b>&nbsp;&nbsp;Launch Source Code 🚀&nbsp;&nbsp;</b></kbd></a>
-    </td>
-    <!-- PROJECT 4 -->
-    <td width="50%" align="center" style="border: 1px solid #1F2428; border-radius: 12px; padding: 20px; background-color: #090909;">
-      <h3 align="center" style="color: #FF0055; margin-bottom: 5px;">🔮 Churn Analytics Engine</h3>
-      <p align="center" style="font-size: 13px; color: #8B949E; margin-top: 0;"><i>Predictive ML Architecture</i></p>
-      <p align="left" style="font-size: 14px; margin: 15px 0;">
-        A comprehensive Data Science pipeline using Random Forests & XGBoost to forecast customer attrition. Engineered with a strict scikit-learn preprocessing flow and FastAPI endpoint.
-      </p>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=3776AB" />
-        <img src="https://img.shields.io/badge/Scikit--Learn-000000?style=for-the-badge&logo=scikit-learn&logoColor=F7931E" />
-        <img src="https://img.shields.io/badge/Pandas-000000?style=for-the-badge&logo=pandas&logoColor=150458" />
-      </p>
-      <a href="https://github.com/UdayPatnala/Churn-Prediction-System"><kbd><b>&nbsp;&nbsp;Launch Source Code 🚀&nbsp;&nbsp;</b></kbd></a>
-    </td>
-  </tr>
-</table>
+<hr>
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%" />
-</div>
+<details>
+  <summary><h3><b>&nbsp; 🌌 Nebula Cinematic Gallery</b> <i>(Gemini API / AI / Full-Stack)</i></h3></summary>
+  <br>
+  <blockquote>
+    An intelligent local memory gallery utilizing the Gemini Flash 1.5 API. Performs high-speed image ingestion, metadata generation, and chronological sorting.
+  </blockquote>
+  <ul>
+    <li><b>AI Integration:</b> Gemini 1.5 Flash for automated image captioning and labeling.</li>
+    <li><b>Local Processing:</b> Dexie.js indexed browser storage for offline-first capabilities.</li>
+    <li><b>Computer Vision:</b> TensorFlow MobileNet & COCO-SSD client-side object detection.</li>
+  </ul>
+  <p>
+    <a href="https://github.com/UdayPatnala/Nebula"><img src="https://img.shields.io/badge/View_Repository-8E2DE2?style=flat-square&logo=github&logoColor=white" /></a>
+  </p>
+</details>
+
+<hr>
+
+<details>
+  <summary><h3><b>&nbsp; 🎵 Music Mirror</b> <i>(Computer Vision / Python / React)</i></h3></summary>
+  <br>
+  <blockquote>
+    A real-time facial emotion recognition music recommendation system. Analyzes user mood via computer vision to curate matched Spotify/YouTube music tracks.
+  </blockquote>
+  <ul>
+    <li><b>Detection:</b> face-api.js analyzing dominant facial expressions in real-time.</li>
+    <li><b>Backend:</b> Python/FastAPI for complex algorithmic matching.</li>
+    <li><b>Frontend:</b> React.js with embedded media players.</li>
+  </ul>
+  <p>
+    <a href="https://github.com/UdayPatnala/music-mirror"><img src="https://img.shields.io/badge/View_Repository-8E2DE2?style=flat-square&logo=github&logoColor=white" /></a>
+  </p>
+</details>
+
+<hr>
+
+<details>
+  <summary><h3><b>&nbsp; ☕ JavaPath Pro</b> <i>(Java / Spring / Educational Tech)</i></h3></summary>
+  <br>
+  <blockquote>
+    An elite interactive platform teaching Java OOP via simulated enterprise ticketing. Integrates a custom sandbox IDE with regex validation and an adaptive AI mentor.
+  </blockquote>
+  <ul>
+    <li><b>Sandbox:</b> Custom regex-based real-time syntax checking IDE.</li>
+    <li><b>AI Mentor:</b> Adaptive structural hints driven by Gemini API.</li>
+    <li><b>Database:</b> SQLite / Sequelize ORM.</li>
+  </ul>
+  <p>
+    <a href="https://github.com/UdayPatnala/Java-Path"><img src="https://img.shields.io/badge/View_Repository-8E2DE2?style=flat-square&logo=github&logoColor=white" /></a>
+  </p>
+</details>
 
 <br><br>
 
-<!-- METRICS DASHBOARD -->
-<h2 align="center">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Globe%20Showing%20Americas.png" alt="Globe" width="35" height="35" />
-  <code>telemetry_dashboard</code>
-</h2>
+<h2 align="center">📈 Contribution Activity</h2>
 
-<!-- Trophy Row -->
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=UdayPatnala&theme=dracula&column=7&no-frame=true&no-bg=true&margin-w=15" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=UdayPatnala&theme=transparent&hide_border=true&bg_color=ffffff&color=8E2DE2&line=4A00E0&point=4A00E0" width="100%" />
 </div>
 
 <br>
 
 <div align="center">
-  <!-- GitHub Activity Graph -->
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=UdayPatnala&theme=react-dark&hide_border=true&bg_color=0D1117&color=00FFCC&line=8A2BE2&point=FFFFFF" width="100%" />
-</div>
-
-<br>
-
-<div align="center">
-  <!-- Stats & Streak Side by Side -->
-  <a href="https://github.com/UdayPatnala">
-    <img src="https://github-readme-stats.vercel.app/api?username=UdayPatnala&show_icons=true&theme=react&hide_border=true&bg_color=0D1117&icon_color=00FFCC&title_color=8A2BE2&text_color=FFFFFF" width="48%" />
-  </a>
-  <a href="https://github.com/UdayPatnala">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=UdayPatnala&theme=react&hide_border=true&background=0D1117&ring=00FFCC&fire=8A2BE2&currStreakLabel=FFFFFF" width="48%" />
-  </a>
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=UdayPatnala&layout=compact&theme=react&hide_border=true&bg_color=0D1117&title_color=00FFCC&text_color=FFFFFF" width="60%" />
-</div>
-
-<br><br>
-
-<!-- FOOTER -->
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=UdayPatnala&label=SYS.VIEWS&color=8A2BE2&style=for-the-badge" alt="Profile Views" />
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=timeGradient&height=80&section=footer&text=EOF%20//%20Let's%20Compile%20The%20Future%20🚀&fontSize=24&animation=fadeIn&fontColor=ffffff" />
+  <img src="https://komarev.com/ghpvc/?username=UdayPatnala&label=Profile%20Visits&color=8E2DE2&style=for-the-badge" alt="Profile Views" />
 </div>
