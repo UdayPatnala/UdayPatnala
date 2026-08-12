@@ -1,0 +1,174 @@
+<svg width="800" height="240" viewBox="0 0 800 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="100%" stop-color="#070a10"/>
+    </linearGradient>
+    <linearGradient id="gridBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#090d13"/>
+      <stop offset="100%" stop-color="#0b0f19"/>
+    </linearGradient>
+    
+    <!-- Neon Glow Filters -->
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glowFood" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
+      
+      .font-code { font-family: 'Fira Code', monospace; }
+      .lbl { font-family: 'Fira Code', monospace; font-size: 11px; fill: #8b949e; font-weight: 600; }
+      .title { font-family: 'Fira Code', monospace; font-size: 14px; fill: #39d353; font-weight: 700; letter-spacing: 1px; }
+      .score-text { font-family: 'Fira Code', monospace; font-size: 13px; fill: #ffffff; font-weight: 700; }
+
+      /* Game Loop Animation: Snake moves along a predefined path eating foods */
+      @keyframes snakeMove {
+        0% { transform: translate(0px, 0px); }
+        /* Move right */
+        5% { transform: translate(16px, 0px); }
+        10% { transform: translate(32px, 0px); }
+        15% { transform: translate(48px, 0px); }
+        /* Move down */
+        20% { transform: translate(48px, 16px); }
+        25% { transform: translate(48px, 32px); }
+        /* Move left */
+        30% { transform: translate(32px, 32px); }
+        35% { transform: translate(16px, 32px); }
+        40% { transform: translate(0px, 32px); }
+        /* Move down */
+        45% { transform: translate(0px, 48px); }
+        /* Move right */
+        50% { transform: translate(16px, 48px); }
+        55% { transform: translate(32px, 48px); }
+        60% { transform: translate(48px, 48px); }
+        65% { transform: translate(64px, 48px); }
+        /* Move up */
+        70% { transform: translate(64px, 32px); }
+        75% { transform: translate(64px, 16px); }
+        80% { transform: translate(64px, 0px); }
+        /* Move left to restart loop */
+        85% { transform: translate(48px, 0px); }
+        90% { transform: translate(32px, 0px); }
+        95% { transform: translate(16px, 0px); }
+        100% { transform: translate(0px, 0px); }
+      }
+
+      /* Food disappear animations */
+      @keyframes foodEat1 {
+        0%, 14% { opacity: 1; transform: scale(1); }
+        15%, 100% { opacity: 0; transform: scale(0); }
+      }
+      @keyframes foodEat2 {
+        0%, 59% { opacity: 1; transform: scale(1); }
+        60%, 100% { opacity: 0; transform: scale(0); }
+      }
+
+      /* Score increments */
+      @keyframes scoreUpdate {
+        0%, 14% { content: "337"; }
+        15%, 59% { content: "338"; }
+        60%, 100% { content: "339"; }
+      }
+
+      /* Pulse Indicator */
+      @keyframes livePulse {
+        0% { opacity: 0.3; }
+        50% { opacity: 1; }
+        100% { opacity: 0.3; }
+      }
+
+      .anim-snake { animation: snakeMove 6s steps(1) infinite; }
+      .anim-food1 { animation: foodEat1 6s infinite; transform-origin: 304px 56px; }
+      .anim-food2 { animation: foodEat2 6s infinite; transform-origin: 320px 88px; }
+      .anim-pulse { animation: livePulse 2s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Outer Card Frame -->
+  <rect width="800" height="240" rx="12" fill="url(#bgGrad)" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Top bar -->
+  <g transform="translate(24, 28)">
+    <circle cx="8" cy="8" r="4.5" fill="#39d353" class="anim-pulse" filter="url(#glowGreen)"/>
+    <text x="20" y="12" class="title">CONTRIBUTION_SNAKE://ACTIVE</text>
+    <text x="560" y="12" class="lbl">TOTAL SCORE:</text>
+    <text x="650" y="12" class="score-text">337 Contributions</text>
+  </g>
+
+  <!-- Calendar Matrix Panel -->
+  <g transform="translate(24, 60)">
+    <!-- Board grid background -->
+    <rect width="752" height="120" rx="8" fill="url(#gridBg)" stroke="#21262d" stroke-width="1.5"/>
+
+    <!-- Grid Squares (Simplified representation of contribution columns) -->
+    <g fill="#161b22">
+      <!-- We draw a nice subset of columns around the active snake play area -->
+      <!-- Column 1 -->
+      <rect x="20" y="16" width="10" height="10" rx="1.5" />
+      <rect x="20" y="32" width="10" height="10" rx="1.5" />
+      <rect x="20" y="48" width="10" height="10" rx="1.5" />
+      <rect x="20" y="64" width="10" height="10" rx="1.5" fill="#0e4429" />
+      <rect x="20" y="80" width="10" height="10" rx="1.5" />
+      <rect x="20" y="96" width="10" height="10" rx="1.5" />
+
+      <!-- Column 2 -->
+      <rect x="36" y="16" width="10" height="10" rx="1.5" />
+      <rect x="36" y="32" width="10" height="10" rx="1.5" fill="#006d32" />
+      <rect x="36" y="48" width="10" height="10" rx="1.5" />
+      <rect x="36" y="64" width="10" height="10" rx="1.5" />
+      <rect x="36" y="80" width="10" height="10" rx="1.5" />
+      <rect x="36" y="96" width="10" height="10" rx="1.5" />
+
+      <!-- Column 3 -->
+      <rect x="52" y="16" width="10" height="10" rx="1.5" />
+      <rect x="52" y="32" width="10" height="10" rx="1.5" />
+      <rect x="52" y="48" width="10" height="10" rx="1.5" fill="#26a641" />
+      <rect x="52" y="64" width="10" height="10" rx="1.5" />
+      <rect x="52" y="80" width="10" height="10" rx="1.5" />
+      <rect x="52" y="96" width="10" height="10" rx="1.5" />
+
+      <!-- Active Snake Grid Area (Columns around 15-25) -->
+      <!-- Filler Columns for realism -->
+      <rect x="180" y="16" width="10" height="10" rx="1.5" />
+      <rect x="180" y="32" width="10" height="10" rx="1.5" />
+      <rect x="180" y="48" width="10" height="10" rx="1.5" fill="#006d32"/>
+      <rect x="180" y="64" width="10" height="10" rx="1.5" fill="#26a641"/>
+      <rect x="180" y="80" width="10" height="10" rx="1.5" />
+      
+      <rect x="196" y="16" width="10" height="10" rx="1.5" fill="#0e4429" />
+      <rect x="196" y="32" width="10" height="10" rx="1.5" />
+      <rect x="196" y="48" width="10" height="10" rx="1.5" />
+      <rect x="196" y="64" width="10" height="10" rx="1.5" />
+      <rect x="196" y="80" width="10" height="10" rx="1.5" />
+
+      <!-- Food 1 (at x=240, y=16 -> offset 256, 16) -->
+      <rect class="anim-food1" x="256" y="16" width="10" height="10" rx="1.5" fill="#ff55bb" filter="url(#glowFood)"/>
+      <!-- Food 2 (at x=272, y=48 -> offset 272, 48) -->
+      <rect class="anim-food2" x="272" y="48" width="10" height="10" rx="1.5" fill="#ff55bb" filter="url(#glowFood)"/>
+
+      <!-- SNAKE BODY SEGMENTS (Animated Group) -->
+      <g class="anim-snake">
+        <!-- Segment 1 (Head) -->
+        <rect x="240" y="16" width="10" height="10" rx="2" fill="#ffffff" filter="url(#glowFood)"/>
+        <!-- Segment 2 -->
+        <rect x="224" y="16" width="10" height="10" rx="2" fill="#39d353" filter="url(#glowGreen)"/>
+        <!-- Segment 3 -->
+        <rect x="208" y="16" width="10" height="10" rx="2" fill="#26a641"/>
+        <!-- Segment 4 -->
+        <rect x="208" y="32" width="10" height="10" rx="2" fill="#006d32"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Legend Bar -->
+  <g transform="translate(24, 200)">
+    <text x="0" y="12" class="lbl">Built with HTML5 Canvas · Controls: WASD or Arrow Keys</text>
+  </g>
+</svg>

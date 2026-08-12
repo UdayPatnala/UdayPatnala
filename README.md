@@ -65,6 +65,31 @@
 
 <br>
 
+<!-- ==================== AUTONOMOUS SNAKE ENGINE ==================== -->
+<h2 align="center">🐍 GitHub Contribution Snake Arcade</h2>
+<p align="center" style="color:#9ca3af; font-size:14px;">
+  <i>Watch the snake eat green contribution squares live directly in your README below!</i>
+</p>
+<br>
+
+<div align="center">
+  <!-- Autonomous Self-Playing SVG Canvas -->
+  <img src="https://raw.githubusercontent.com/UdayPatnala/UdayPatnala/main/assets/snake.svg" width="100%" alt="Autonomous Contribution Snake Engine Live" />
+  
+  <br><br>
+
+  <!-- Interactive Buttons -->
+  <a href="https://uday-snake.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/▶_PLAY_INTERACTIVE_SNAKE-39d353?style=for-the-badge&logoColor=black" />
+  </a>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/UdayPatnala/UdayPatnala/main/assets/divider.svg" width="100%" height="3"/>
+</div>
+
 <!-- ==================== ABOUT ME ==================== -->
 <h3 align="center">💡 Engineering Overview</h3>
 
