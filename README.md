@@ -36,13 +36,13 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/OOP-4d4d4d?style=flat-square" />
-  <img src="https://img.shields.io/badge/Data_Structures_%26_Algorithms-4d4d4d?style=flat-square" />
-  <img src="https://img.shields.io/badge/DBMS-4d4d4d?style=flat-square" />
-  <img src="https://img.shields.io/badge/REST_APIs-4d4d4d?style=flat-square" />
-  <img src="https://img.shields.io/badge/Software_Testing-4d4d4d?style=flat-square" />
-  <img src="https://img.shields.io/badge/Debugging-4d4d4d?style=flat-square" />
-  <img src="https://img.shields.io/badge/Machine_Learning-4d4d4d?style=flat-square" />
+  <img src="https://img.shields.io/badge/Core_Java_17-007396?style=flat-square&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=spring&logoColor=white" />
+  <img src="https://img.shields.io/badge/Data_Structures_%26_Algorithms-00f0ff?style=flat-square&logoColor=black" />
+  <img src="https://img.shields.io/badge/MySQL_%26_PostgreSQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/REST_APIs-000000?style=flat-square" />
+  <img src="https://img.shields.io/badge/Software_Testing-10b981?style=flat-square" />
+  <img src="https://img.shields.io/badge/Machine_Learning-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" />
 </p>
 
 <br><br>
