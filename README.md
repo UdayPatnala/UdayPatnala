@@ -136,11 +136,11 @@
 <br>
 
 <div align="center">
-  <a href="https://skill-tetris.vercel.app/" target="_blank">
+  <a href="https://portifolio-tetris-game.vercel.app/" target="_blank">
     <img src="https://raw.githubusercontent.com/UdayPatnala/UdayPatnala/main/assets/tetris-preview.svg" width="480" alt="Skill Tetris preview — each falling block is a skill" />
   </a>
   <br><br>
-  <a href="https://skill-tetris.vercel.app/">
+  <a href="https://portifolio-tetris-game.vercel.app/">
     <img src="https://img.shields.io/badge/▶_PLAY_SKILL_TETRIS-5ee88f?style=for-the-badge&logoColor=black" />
   </a>
   <br>
