@@ -144,7 +144,7 @@
     <img src="https://img.shields.io/badge/▶_PLAY_SKILL_TETRIS-5ee88f?style=for-the-badge&logoColor=black" />
   </a>
   <br>
-  <sub>built with vanilla JS · source in <code>/skill-tetris</code></sub>
+  <sub>built with vanilla JS · <a href="https://github.com/UdayPatnala/tetris">source code</a></sub>
 </div>
 
 <br>
