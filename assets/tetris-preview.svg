@@ -1,0 +1,72 @@
+<svg width="520" height="300" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141d27"/>
+      <stop offset="100%" stop-color="#0a0e14"/>
+    </linearGradient>
+    <style>
+      .lbl { font-family: 'Courier New', monospace; font-size: 12px; fill: #eaf4ee; font-weight: bold; }
+      .title { font-family: 'Courier New', monospace; font-size: 15px; fill: #5ee88f; font-weight: bold; letter-spacing: 2px; }
+      .sub { font-family: 'Courier New', monospace; font-size: 11px; fill: #7d93a3; }
+    </style>
+  </defs>
+  <rect width="520" height="300" rx="10" fill="url(#bgGrad)" stroke="#263544" stroke-width="2"/>
+  <text x="24" y="34" class="title">SKILL://TETRIS</text>
+  <text x="24" y="52" class="sub">click to play — each block is a skill</text>
+
+  <!-- board frame -->
+  <rect x="24" y="66" width="200" height="210" rx="4" fill="#0f1620" stroke="#263544" stroke-width="2"/>
+
+  <!-- stacked blocks -->
+  <g stroke="#0a0e14" stroke-width="1">
+    <rect x="34" y="236" width="20" height="20" fill="#6fd6ff"/>
+    <rect x="54" y="236" width="20" height="20" fill="#6fd6ff"/>
+    <rect x="74" y="236" width="20" height="20" fill="#6fd6ff"/>
+    <rect x="94" y="236" width="20" height="20" fill="#6fd6ff"/>
+
+    <rect x="114" y="216" width="20" height="20" fill="#ffb454"/>
+    <rect x="134" y="216" width="20" height="20" fill="#ffb454"/>
+    <rect x="114" y="236" width="20" height="20" fill="#ffb454"/>
+    <rect x="134" y="236" width="20" height="20" fill="#ffb454"/>
+
+    <rect x="154" y="196" width="20" height="20" fill="#b48cff"/>
+    <rect x="154" y="216" width="20" height="20" fill="#b48cff"/>
+    <rect x="174" y="216" width="20" height="20" fill="#b48cff"/>
+    <rect x="194" y="216" width="20" height="20" fill="#b48cff"/>
+
+    <rect x="34" y="216" width="20" height="20" fill="#ff7a5c"/>
+    <rect x="34" y="196" width="20" height="20" fill="#ff7a5c"/>
+    <rect x="54" y="196" width="20" height="20" fill="#ff7a5c"/>
+    <rect x="74" y="196" width="20" height="20" fill="#ff7a5c"/>
+
+    <rect x="94" y="216" width="20" height="20" fill="#5ee88f"/>
+    <rect x="94" y="196" width="20" height="20" fill="#5ee88f"/>
+    <rect x="114" y="196" width="20" height="20" fill="#5ee88f"/>
+  </g>
+
+  <!-- legend -->
+  <g class="lbl" font-size="13">
+    <rect x="248" y="70" width="14" height="14" fill="#6fd6ff"/>
+    <text x="268" y="82">JAVA</text>
+
+    <rect x="248" y="96" width="14" height="14" fill="#ffb454"/>
+    <text x="268" y="108">SQL</text>
+
+    <rect x="248" y="122" width="14" height="14" fill="#b48cff"/>
+    <text x="268" y="134">REACT</text>
+
+    <rect x="248" y="148" width="14" height="14" fill="#5ee88f"/>
+    <text x="268" y="160">PYTHON</text>
+
+    <rect x="248" y="174" width="14" height="14" fill="#ff6fae"/>
+    <text x="268" y="186">GIT</text>
+
+    <rect x="248" y="200" width="14" height="14" fill="#7fa8ff"/>
+    <text x="268" y="212">REST API</text>
+
+    <rect x="248" y="226" width="14" height="14" fill="#ff7a5c"/>
+    <text x="268" y="238">DBMS</text>
+  </g>
+
+  <text x="248" y="266" class="sub">clear lines to unlock projects →</text>
+</svg>
