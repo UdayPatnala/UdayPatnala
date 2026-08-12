@@ -29,30 +29,6 @@
 
 ---
 
-### 🎮 Interactive Profile Games
-
-#### 🕹️ Skill Tetris Arcade
-Watch the engine auto-play directly inside the card below, or click to launch the interactive game in your browser.
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/UdayPatnala/UdayPatnala/main/assets/tetris-preview.svg" width="90%" alt="Skill Tetris" />
-  <br>
-  <a href="https://portifolio-tetris-game.vercel.app/" target="_blank">▶ Play Interactive Game</a> &bull; <a href="https://github.com/UdayPatnala/tetris" target="_blank">View Game Source</a>
-</div>
-
-<br>
-
-#### 🐍 GitHub Contribution Snake
-Watch the snake eat contribution squares live, or click to launch the arcade version.
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/UdayPatnala/UdayPatnala/main/assets/snake.svg" width="90%" alt="Contribution Snake" />
-  <br>
-  <a href="https://uday-snake.vercel.app/" target="_blank">▶ Play Contribution Snake</a> &bull; <a href="https://github.com/UdayPatnala/github-snake" target="_blank">View Game Source</a>
-</div>
-
----
-
 ### 🛠️ Technical Arsenal
 
 * **Backend &amp; Languages**: Java (17+), Spring Boot, Python, REST APIs
