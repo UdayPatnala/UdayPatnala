@@ -1,72 +1,301 @@
-<svg width="520" height="300" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="420" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#141d27"/>
-      <stop offset="100%" stop-color="#0a0e14"/>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#070a10"/>
     </linearGradient>
+    <linearGradient id="matrixBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#060911"/>
+      <stop offset="100%" stop-color="#0e1626"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#7000ff"/>
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffe600"/>
+      <stop offset="100%" stop-color="#ff7700"/>
+    </linearGradient>
+    
+    <!-- Neon Glow Filters -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
     <style>
-      .lbl { font-family: 'Courier New', monospace; font-size: 12px; fill: #eaf4ee; font-weight: bold; }
-      .title { font-family: 'Courier New', monospace; font-size: 15px; fill: #5ee88f; font-weight: bold; letter-spacing: 2px; }
-      .sub { font-family: 'Courier New', monospace; font-size: 11px; fill: #7d93a3; }
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
+      
+      .font-code { font-family: 'Fira Code', monospace; }
+      .title-text { font-family: 'Fira Code', monospace; font-weight: 700; font-size: 16px; fill: #00f0ff; letter-spacing: 2px; }
+      .status-tag { font-family: 'Fira Code', monospace; font-weight: 600; font-size: 11px; fill: #5ee88f; letter-spacing: 1px; }
+      .hud-label { font-family: 'Fira Code', monospace; font-weight: 600; font-size: 11px; fill: #6b7280; text-transform: uppercase; letter-spacing: 1.5px; }
+      .hud-value { font-family: 'Fira Code', monospace; font-weight: 700; font-size: 18px; fill: #f3f4f6; }
+      .legend-text { font-family: 'Fira Code', monospace; font-weight: 600; font-size: 12px; fill: #d1d5db; }
+      .unlock-title { font-family: 'Fira Code', monospace; font-weight: 700; font-size: 12px; fill: #ffe600; }
+
+      /* Keyframe Animations for Autonomous Gameplay */
+      
+      /* Piece 1: Falling Java I-Block (Cyan) */
+      @keyframes fallJava {
+        0%   { transform: translateY(-120px); opacity: 0; }
+        10%  { transform: translateY(-120px); opacity: 1; }
+        35%  { transform: translateY(120px); }
+        40%  { transform: translateY(120px); }
+        100% { transform: translateY(120px); opacity: 1; }
+      }
+      
+      /* Piece 2: Falling React T-Block (Purple) with rotation */
+      @keyframes fallReact {
+        0%, 30% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+        35%     { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+        55%     { transform: translateY(40px) rotate(90deg); }
+        65%     { transform: translateY(100px) rotate(90deg); }
+        100%    { transform: translateY(100px) rotate(90deg); opacity: 1; }
+      }
+
+      /* Piece 3: Falling Spring O-Block (Green - Completes Row) */
+      @keyframes fallSpring {
+        0%, 60% { transform: translateY(-100px); opacity: 0; }
+        65%     { transform: translateY(-100px); opacity: 1; }
+        82%     { transform: translateY(140px); }
+        100%    { transform: translateY(140px); opacity: 1; }
+      }
+
+      /* Flash Line Clear Animation */
+      @keyframes lineClearFlash {
+        0%, 82%   { opacity: 0; transform: scaleX(0); }
+        85%       { opacity: 1; transform: scaleX(1); }
+        92%       { opacity: 1; transform: scaleX(1); }
+        98%, 100% { opacity: 0; transform: scaleX(1); }
+      }
+
+      /* Score Counter Pulse */
+      @keyframes scorePulse {
+        0%, 82% { fill: #f3f4f6; transform: scale(1); }
+        86%     { fill: #ffe600; transform: scale(1.15); }
+        95%     { fill: #00f0ff; transform: scale(1.05); }
+        100%    { fill: #f3f4f6; transform: scale(1); }
+      }
+
+      /* Pulse Indicator */
+      @keyframes livePulse {
+        0%   { opacity: 0.3; transform: scale(0.9); }
+        50%  { opacity: 1; transform: scale(1.1); }
+        100% { opacity: 0.3; transform: scale(0.9); }
+      }
+
+      .anim-java { animation: fallJava 8s cubic-bezier(0.25, 1, 0.5, 1) infinite; }
+      .anim-react { animation: fallReact 8s cubic-bezier(0.25, 1, 0.5, 1) infinite; transform-origin: 130px 60px; }
+      .anim-spring { animation: fallSpring 8s cubic-bezier(0.25, 1, 0.5, 1) infinite; }
+      .anim-flash { animation: lineClearFlash 8s ease-out infinite; transform-origin: left center; }
+      .anim-score { animation: scorePulse 8s ease-in-out infinite; }
+      .anim-pulse { animation: livePulse 2s ease-in-out infinite; transform-origin: center; }
     </style>
   </defs>
-  <rect width="520" height="300" rx="10" fill="url(#bgGrad)" stroke="#263544" stroke-width="2"/>
-  <text x="24" y="34" class="title">SKILL://TETRIS</text>
-  <text x="24" y="52" class="sub">click to play — each block is a skill</text>
 
-  <!-- board frame -->
-  <rect x="24" y="66" width="200" height="210" rx="4" fill="#0f1620" stroke="#263544" stroke-width="2"/>
+  <!-- Outer Glassmorphic Frame -->
+  <rect width="800" height="420" rx="16" fill="url(#bgGrad)" stroke="#1f293d" stroke-width="2"/>
+  
+  <!-- Ambient Top Neon Glow Line -->
+  <rect x="2" y="2" width="796" height="3" fill="url(#cyanGlow)"/>
 
-  <!-- stacked blocks -->
-  <g stroke="#0a0e14" stroke-width="1">
-    <rect x="34" y="236" width="20" height="20" fill="#6fd6ff"/>
-    <rect x="54" y="236" width="20" height="20" fill="#6fd6ff"/>
-    <rect x="74" y="236" width="20" height="20" fill="#6fd6ff"/>
-    <rect x="94" y="236" width="20" height="20" fill="#6fd6ff"/>
+  <!-- Top Header Bar -->
+  <g transform="translate(28, 32)">
+    <!-- Live Autonomous Badge -->
+    <circle cx="8" cy="8" r="5" fill="#5ee88f" class="anim-pulse" filter="url(#glowGreen)"/>
+    <text x="22" y="12" class="status-tag">AUTONOMOUS ENGINE ACTIVE</text>
 
-    <rect x="114" y="216" width="20" height="20" fill="#ffb454"/>
-    <rect x="134" y="216" width="20" height="20" fill="#ffb454"/>
-    <rect x="114" y="236" width="20" height="20" fill="#ffb454"/>
-    <rect x="134" y="236" width="20" height="20" fill="#ffb454"/>
-
-    <rect x="154" y="196" width="20" height="20" fill="#b48cff"/>
-    <rect x="154" y="216" width="20" height="20" fill="#b48cff"/>
-    <rect x="174" y="216" width="20" height="20" fill="#b48cff"/>
-    <rect x="194" y="216" width="20" height="20" fill="#b48cff"/>
-
-    <rect x="34" y="216" width="20" height="20" fill="#ff7a5c"/>
-    <rect x="34" y="196" width="20" height="20" fill="#ff7a5c"/>
-    <rect x="54" y="196" width="20" height="20" fill="#ff7a5c"/>
-    <rect x="74" y="196" width="20" height="20" fill="#ff7a5c"/>
-
-    <rect x="94" y="216" width="20" height="20" fill="#5ee88f"/>
-    <rect x="94" y="196" width="20" height="20" fill="#5ee88f"/>
-    <rect x="114" y="196" width="20" height="20" fill="#5ee88f"/>
+    <!-- Title -->
+    <text x="320" y="12" class="title-text" filter="url(#glowCyan)">SKILL://TETRIS_v2.0</text>
+    
+    <!-- Subtitle -->
+    <text x="600" y="12" class="hud-label" font-size="10">LIVE SIMULATOR</text>
   </g>
 
-  <!-- legend -->
-  <g class="lbl" font-size="13">
-    <rect x="248" y="70" width="14" height="14" fill="#6fd6ff"/>
-    <text x="268" y="82">JAVA</text>
+  <!-- ==================== LEFT PANEL: TETRIS MATRIX ==================== -->
+  <g transform="translate(28, 56)">
+    <!-- Matrix Container Box -->
+    <rect width="240" height="340" rx="10" fill="url(#matrixBg)" stroke="#1e293b" stroke-width="2"/>
+    
+    <!-- Grid Overlay Lines -->
+    <path d="
+      M24,0 V340 M48,0 V340 M72,0 V340 M96,0 V340 M120,0 V340 M144,0 V340 M168,0 V340 M192,0 V340 M216,0 V340
+      M0,34 H240 M0,68 H240 M0,102 H240 M0,136 H240 M0,170 H240 M0,204 H240 M0,238 H240 M0,272 H240 M0,306 H240
+    " stroke="#162032" stroke-width="1" stroke-dasharray="2,2"/>
 
-    <rect x="248" y="96" width="14" height="14" fill="#ffb454"/>
-    <text x="268" y="108">SQL</text>
+    <!-- STACKED BASE BLOCKS (Landed Blocks at Bottom) -->
+    <g opacity="0.95">
+      <!-- Bottom Row 1 (y=306) -->
+      <rect x="0" y="306" width="24" height="34" fill="#00f0ff" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="24" y="306" width="24" height="34" fill="#00f0ff" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="48" y="306" width="24" height="34" fill="#00f0ff" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="72" y="306" width="24" height="34" fill="#ff7700" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="96" y="306" width="24" height="34" fill="#ff7700" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="120" y="306" width="24" height="34" fill="#a855f7" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="144" y="306" width="24" height="34" fill="#a855f7" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="168" y="306" width="24" height="34" fill="#3b82f6" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="192" y="306" width="24" height="34" fill="#3b82f6" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="216" y="306" width="24" height="34" fill="#3b82f6" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
 
-    <rect x="248" y="122" width="14" height="14" fill="#b48cff"/>
-    <text x="268" y="134">REACT</text>
+      <!-- Row 2 (y=272) -->
+      <rect x="0" y="272" width="24" height="34" fill="#10b981" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="24" y="272" width="24" height="34" fill="#10b981" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="48" y="272" width="24" height="34" fill="#ff7700" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="72" y="272" width="24" height="34" fill="#ff7700" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="168" y="272" width="24" height="34" fill="#ec4899" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="192" y="272" width="24" height="34" fill="#ec4899" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="216" y="272" width="24" height="34" fill="#ec4899" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
 
-    <rect x="248" y="148" width="14" height="14" fill="#5ee88f"/>
-    <text x="268" y="160">PYTHON</text>
+      <!-- Row 3 (y=238) -->
+      <rect x="0" y="238" width="24" height="34" fill="#eab308" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="24" y="238" width="24" height="34" fill="#eab308" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="48" y="238" width="24" height="34" fill="#eab308" rx="2" stroke="#0b0f19" stroke-width="1.5"/>
+    </g>
 
-    <rect x="248" y="174" width="14" height="14" fill="#ff6fae"/>
-    <text x="268" y="186">GIT</text>
+    <!-- AUTONOMOUS FALLING PIECES -->
+    
+    <!-- 1. Java I-Block (Cyan) falling into x=120, y=272 -->
+    <g class="anim-java">
+      <rect x="96" y="136" width="24" height="34" fill="#00f0ff" rx="3" stroke="#0b0f19" stroke-width="1.5" filter="url(#glowCyan)"/>
+      <rect x="120" y="136" width="24" height="34" fill="#00f0ff" rx="3" stroke="#0b0f19" stroke-width="1.5" filter="url(#glowCyan)"/>
+      <rect x="144" y="136" width="24" height="34" fill="#00f0ff" rx="3" stroke="#0b0f19" stroke-width="1.5" filter="url(#glowCyan)"/>
+    </g>
 
-    <rect x="248" y="200" width="14" height="14" fill="#7fa8ff"/>
-    <text x="268" y="212">REST API</text>
+    <!-- 2. React T-Block (Purple) falling -->
+    <g class="anim-react">
+      <rect x="120" y="34" width="24" height="34" fill="#a855f7" rx="3" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="96" y="68" width="24" height="34" fill="#a855f7" rx="3" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="120" y="68" width="24" height="34" fill="#a855f7" rx="3" stroke="#0b0f19" stroke-width="1.5"/>
+      <rect x="144" y="68" width="24" height="34" fill="#a855f7" rx="3" stroke="#0b0f19" stroke-width="1.5"/>
+    </g>
 
-    <rect x="248" y="226" width="14" height="14" fill="#ff7a5c"/>
-    <text x="268" y="238">DBMS</text>
+    <!-- 3. Spring Boot O-Block (Green) falling into empty slot -->
+    <g class="anim-spring">
+      <rect x="96" y="102" width="24" height="34" fill="#10b981" rx="3" stroke="#0b0f19" stroke-width="1.5" filter="url(#glowGreen)"/>
+      <rect x="120" y="102" width="24" height="34" fill="#10b981" rx="3" stroke="#0b0f19" stroke-width="1.5" filter="url(#glowGreen)"/>
+      <rect x="96" y="136" width="24" height="34" fill="#10b981" rx="3" stroke="#0b0f19" stroke-width="1.5" filter="url(#glowGreen)"/>
+      <rect x="120" y="136" width="24" height="34" fill="#10b981" rx="3" stroke="#0b0f19" stroke-width="1.5" filter="url(#glowGreen)"/>
+    </g>
+
+    <!-- LINE CLEAR FLASH EFFECT -->
+    <rect class="anim-flash" x="0" y="272" width="240" height="34" fill="url(#goldGlow)" rx="4" opacity="0.95"/>
   </g>
 
-  <text x="248" y="266" class="sub">clear lines to unlock projects →</text>
+  <!-- ==================== RIGHT PANEL: TELEMETRY & HUD ==================== -->
+  
+  <!-- HUD Card 1: Score & Metrics -->
+  <g transform="translate(292, 56)">
+    <rect width="480" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    
+    <!-- Score Column -->
+    <g transform="translate(24, 20)">
+      <text y="0" class="hud-label">TOTAL SCORE</text>
+      <text y="30" class="hud-value anim-score">2,480 PTS</text>
+    </g>
+
+    <!-- Level Column -->
+    <g transform="translate(180, 20)">
+      <text y="0" class="hud-label">LEVEL</text>
+      <text y="30" class="hud-value" fill="#00f0ff">08</text>
+    </g>
+
+    <!-- Lines Column -->
+    <g transform="translate(290, 20)">
+      <text y="0" class="hud-label">LINES CLEARED</text>
+      <text y="30" class="hud-value" fill="#10b981">16</text>
+    </g>
+
+    <!-- Speed Column -->
+    <g transform="translate(400, 20)">
+      <text y="0" class="hud-label">SPEED</text>
+      <text y="30" class="hud-value" fill="#eab308">1.5x</text>
+    </g>
+  </g>
+
+  <!-- HUD Card 2: Active Skill Matrix Legend -->
+  <g transform="translate(292, 155)">
+    <rect width="230" height="241" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="18" y="28" class="hud-label">FALLING SKILL MATRIX</text>
+    
+    <g transform="translate(18, 48)">
+      <!-- Skill 1: Java -->
+      <g transform="translate(0, 0)">
+        <rect width="14" height="14" rx="3" fill="#00f0ff"/>
+        <text x="24" y="12" class="legend-text">Java 17 (OOP/DSA)</text>
+      </g>
+      <!-- Skill 2: Spring Boot -->
+      <g transform="translate(0, 28)">
+        <rect width="14" height="14" rx="3" fill="#10b981"/>
+        <text x="24" y="12" class="legend-text">Spring Boot Microservices</text>
+      </g>
+      <!-- Skill 3: SQL & Databases -->
+      <g transform="translate(0, 56)">
+        <rect width="14" height="14" rx="3" fill="#ff7700"/>
+        <text x="24" y="12" class="legend-text">MySQL &amp; PostgreSQL</text>
+      </g>
+      <!-- Skill 4: React -->
+      <g transform="translate(0, 84)">
+        <rect width="14" height="14" rx="3" fill="#a855f7"/>
+        <text x="24" y="12" class="legend-text">React.js &amp; Frontend</text>
+      </g>
+      <!-- Skill 5: REST APIs -->
+      <g transform="translate(0, 112)">
+        <rect width="14" height="14" rx="3" fill="#3b82f6"/>
+        <text x="24" y="12" class="legend-text">RESTful API Design</text>
+      </g>
+      <!-- Skill 6: Python & ML -->
+      <g transform="translate(0, 140)">
+        <rect width="14" height="14" rx="3" fill="#eab308"/>
+        <text x="24" y="12" class="legend-text">Python / Data Science</text>
+      </g>
+      <!-- Skill 7: Git & DevOps -->
+      <g transform="translate(0, 168)">
+        <rect width="14" height="14" rx="3" fill="#ec4899"/>
+        <text x="24" y="12" class="legend-text">Git, AWS &amp; CI/CD</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- HUD Card 3: Unlocked Project Milestones -->
+  <g transform="translate(536, 155)">
+    <rect width="236" height="241" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="18" y="28" class="hud-label">UNLOCKED MILESTONES</text>
+
+    <g transform="translate(18, 48)">
+      <!-- Milestone 1 -->
+      <g transform="translate(0, 0)">
+        <circle cx="8" cy="12" r="5" fill="#ffe600" class="anim-pulse"/>
+        <text x="20" y="12" class="unlock-title">JavaPath Pro</text>
+        <text x="20" y="26" class="font-code" font-size="10" fill="#9ca3af">Live Java Execution Engine</text>
+      </g>
+
+      <!-- Milestone 2 -->
+      <g transform="translate(0, 48)">
+        <circle cx="8" cy="12" r="5" fill="#5ee88f" class="anim-pulse"/>
+        <text x="20" y="12" class="unlock-title">Bookstore Backend</text>
+        <text x="20" y="26" class="font-code" font-size="10" fill="#9ca3af">Spring Boot REST System</text>
+      </g>
+
+      <!-- Milestone 3 -->
+      <g transform="translate(0, 96)">
+        <circle cx="8" cy="12" r="5" fill="#00f0ff" class="anim-pulse"/>
+        <text x="20" y="12" class="unlock-title">Music Mirror</text>
+        <text x="20" y="26" class="font-code" font-size="10" fill="#9ca3af">AI Emotion Music Recommender</text>
+      </g>
+
+      <!-- Milestone 4 -->
+      <g transform="translate(0, 144)">
+        <circle cx="8" cy="12" r="5" fill="#a855f7" class="anim-pulse"/>
+        <text x="20" y="12" class="unlock-title">Churn Prediction</text>
+        <text x="20" y="26" class="font-code" font-size="10" fill="#9ca3af">ML Customer Attrition Model</text>
+      </g>
+    </g>
+  </g>
 </svg>
